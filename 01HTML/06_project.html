@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GATE Registration Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="background-color: rgb(156, 236, 156); border-radius: 3px;">Registration Form for GATE 2025</h1>
+    </header>
+    <form>
+      <section>
+        <label for="name">
+          <b>Name of the candidate: </b><input type="text" /> </label
+        ><br /><br />
+        <label for="email"> <b>Email Address: </b><input type="email" /> </label
+        ><br /><br />
+        <label for="mobile">
+          <b>Mobile Number: </b><input type="tel" maxlength="10" required />
+          <button type="button">Send OTP</button>
+          <input type="tel" maxlength="6" placeholder="Enter OTP" />
+          <button type="button">Varify OTP</button> </label
+        ><br /><br />
+
+        <label for="DOB"> <b>Date of Birth: </b><input type="date" /> </label
+        ><br /><br />
+        <label for="gender">
+          <b>Gender: </b><input type="radio" name="gender" /><label for="male"
+            >Male</label
+          >
+          <input type="radio" name="gender" /><label for="femake">Female</label>
+          <input type="radio" name="gender" /><label for="other"
+            >Others</label
+          > </label
+        ><br /><br />
+        <label for="Category">
+          <b>Category: </b><input type="radio" name="Category" /><label for=""
+            >GEN</label
+          >
+          <input type="radio" name="Category" /><label for="">OBC</label>
+          <input type="radio" name="Category" /><label for="">SC</label>
+          <input type="radio" name="Category" /><label for="">ST</label> </label
+        ><br /><br />
+      </section>
+
+      <section>
+        <label for="papers">
+          <b>Select Gate 2025 Paper:</b>
+          <select name="papers" id="">
+            <option value="CSIT">
+              Computer Science and Information Technology
+            </option>
+            <option value="ECE">Electronics and Communication</option>
+            <option value="EE">Electrical Engineering</option>
+            <option value="CE">Civil Engineering</option>
+          </select>
+        </label>
+      </section>
+      <br /><br />
+
+      <footer style="margin-left: 200px">
+        <button type="reset">Reset Application</button>
+        <button type="submit">Submit Application</button>
+      </footer>
+    </form>
+  </body>
+</html>
