@@ -1,0 +1,41 @@
+h2{
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 20px;
+    padding: 10px 20px ;
+
+    /* shortcut
+    border: 5px red solid; 
+    */
+    margin: 20px 50px 55px  15px;    
+}
+h4{
+    background-color: #17fced;
+    /* border-left-width: 10px;
+    border-left-color: red;
+    border-left-style: solid; */
+    border-width: 10px 20px;
+    border-style: solid;
+    border-color: greenyellow;
+}
+
+/* when we have 2 values for border width it will be allocated 1st value for top,bottom and 2nd for left,right */
+/* clockwise allocation of values if 4 values,top right btm left  
+same for padding as well as same for margin
+*/
+
+ul{
+    background-color: pink;
+}
+p{
+    /* background-color: tomato; */
+    border: 5px solid;
+    border-style: solid;
+    border-color: blue;
+    border-width: 10px;
+    padding: 15px;
+}
