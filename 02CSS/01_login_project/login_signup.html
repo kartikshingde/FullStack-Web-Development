@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and SignUp</title>
+    <style>
+        body{
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .card{
+            background-color: #dad7d7;
+            padding: 30px;
+            width: 300px;
+            border-radius: 5px;
+        }
+        h1{
+            color: rgb(0, 115, 255);
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            gap: 10px;
+            
+        }
+        input{
+            padding: 7px;
+            border: solid rgb(243, 154, 154);
+            border-radius: 5px;
+            background-color: #c9c9c7;
+
+
+        }
+        button{
+            padding: 5px;
+            border-radius: 5px;
+            
+        }
+        button:hover{
+            background-color: #1b8dff;
+        }
+        .btn{
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <h1>SignUp</h1>
+        <form>
+            <input type="email" placeholder="Enter Email" required>
+            <input type="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+
+            <a href="./signup.html">
+                <button type="button" class="btn">SignUp</button>
+            </a>
+            
+        </form>
+    </div>
+    
+</body>
+</html>
