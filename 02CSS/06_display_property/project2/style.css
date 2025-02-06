@@ -1,0 +1,13 @@
+.circle{
+    background-color: red;
+    height: 40vh
+    3;
+    width: 40vh;
+    border-radius: 50%;
+    /* margin: auto;  horizontally chejo ko centre leta hai */ 
+    margin: auto;
+    margin-top: 30vh;
+
+}
+
+/* how to center a div */
