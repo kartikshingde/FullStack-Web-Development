@@ -1,0 +1,11 @@
+.container{
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    overflow: auto;
+}
+
+/* by default , overflow is visible */
+/* overflow:hiddent => overflowed content will be hidden */
+/* overflow:scroll => on scroll content will be shown */
+/* overflow:auto => it will auto show content if overflow */
