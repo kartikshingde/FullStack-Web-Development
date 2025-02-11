@@ -1,0 +1,58 @@
+/* *{
+    margin: 0;
+} */
+.container{
+    background-color: aquamarine;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    align-content: space-evenly;
+
+
+
+    /* align-items: center; */
+    /* align-items: baseline; */
+    /* flex-wrap: wrap-reverse; */
+    
+    
+}
+
+/* flex direction will identify main axis */
+/* row: horizontal is main axis then vertical is cross axis */
+/* column: vertical is main axis then horizonatal is cross axis */
+/* justify content , it will be around main axis */
+
+/* align axis works around cross axis */
+
+.box{
+    height: 150px;
+    width: 150px;
+    border: 5px solid black;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* .first{
+    font-size: 50px;
+    margin: 10px;
+
+}
+.second{
+    font-size: 25px;
+} */
+
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: blue;
+}
+.box3{
+    background-color: green;
+}
+.box4{
+    background-color: orange;
+}
