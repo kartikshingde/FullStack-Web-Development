@@ -14,6 +14,7 @@
 h1{
     color: white;
 }
+
 .right button{
 
     margin-left: 0.8rem;
@@ -81,7 +82,7 @@ h1{
 
 .mover h2{
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: bold;  
 }
 
 .images{
@@ -92,8 +93,10 @@ h1{
 .movies{
     display: flex;
     margin-bottom: 100px;
+    overflow-x: scroll; 
 }
 .card{
+
     border: 0.3rem solid rgb(202, 199, 199);
     background-color: rgb(202, 199, 199);
     text-align: center;
@@ -103,5 +106,35 @@ h1{
 }
 .card > h3{
     font-size: 2rem;
+
+}
+
+.bot{
+    margin-top: 2rem;
+    text-align: center;
+}
+.bot > img{
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+@media (max-width:650px) {
+    .logo{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    
+}
+@media (max-width:500px){
+    .movies{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
 }
