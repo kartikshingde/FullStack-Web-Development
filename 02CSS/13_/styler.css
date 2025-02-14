@@ -27,9 +27,19 @@ p{
 } */
 
 
-h1{
+/* h1{
     font-size: 40px;
 }
 span{
     vertical-align: super;
+} */
+h1{
+    text-transform: capitalize;
+
+}
+p{
+    /* text-indent: 50px;
+    letter-spacing: 2px;
+    line-height: 25px; */
+    /* text-shadow: 0px 2px; */
 }
