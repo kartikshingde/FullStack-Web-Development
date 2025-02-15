@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    padding: 5rem;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(94, 91, 91);
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+
+
+
+
+}
+
+.box{
+    /* font-size: 2rem; */
+    background-color: orange;
+    /* border: 0.5rem solid black; */
+    border-radius: 5px;
+}
+
+.sidebar{
+    grid-row: 1/4;
+    background-color: green;
+}
+.second{
+    grid-column: 2/4;
+    background-color: green;
+}
+.third{
+    background-color: red;
+}
+.four{
+    background-color: orange;
+}
+.five,.seven{
+    background-color: red;
+}
+.six{
+    background-color: green;
+    grid-row: 2/4;
+    grid-column: -2/-1;
+}
