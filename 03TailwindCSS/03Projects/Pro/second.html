@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmMan</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font awesome cdv -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="h-screen  flex">
+
+        <img class="hidden lg:block w-1/2" src="https://img.freepik.com/free-photo/cows-green-field-blue-sky_335224-507.jpg?ga=GA1.1.797145510.1739854907&semt=ais_hybrid" alt="">
+
+        <!-- Login Section -->
+        <div class="flex flex-col justify-center items-center border w-full lg:w-1/2">
+
+            <div>
+                <div class="text-xl font-bold text-center lg:text-left">
+                    <span class="text-green-600">&#9650</span>
+                    <span>FarmMan</span>
+                </div>
+            </div>
+
+            <div class="mt-10 font-bold text-3xl lg:text-left">
+                <h2>Hello,</h2>
+                <h2>Welcome back</h2>
+
+            </div>
+
+            <!-- Login Form -->
+            <form class="mt-10 w-[80%] 
+            lg:w-55 mx-auto space-y-4">
+            <h4>Login to manage your account</h4>
+            <input type="text" class="border rounded w-full px-4 py-2" placeholder="Email">
+            <input type="password" class="border rounded w-full px-4 py-2" placeholder="Password">
+            <div class="text-blue-600 hover:text-blue-400 cursor-pointer">
+                Forgot your Password?
+            </div>
+            <button class="w-full mt-2 bg-green-600  rounded text-white p-1 hover:bg-green-400 cursor-pointer">Login</button>
+            <div class="text-center space-y-4 mt-1">
+                <span>OR</span>
+                <div class="flex gap-8 justify-center items-center mt-2">
+                    <!-- Take icons From Font Awesome -->
+                     <i class="fa-brands fa-facebook cursor-pointer"></i>
+                     <i class="fa-brands fa-instagram cursor-pointer"></i>
+                     <i class="fa-brands fa-google cursorp "></i>
+                </div>
+            </div>
+            <div class="mt-4 text-sm text-center">
+                Don't have an accout?
+                <span class="text-blue-600 hover:text-blue-400 cursor-pointer">Sign Up</span>
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
