@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(245, 134, 247);
+}
+
+#button{
+    background-color: rgb(238, 170, 86);
+    color: rgb(45, 8, 232);
+    font-style: oblique;
+    padding: 12px;
+    width: 130px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%
+}
+button:hover{
+    transform: scaleX(1.5);
+    cursor: pointer;
+    
+}

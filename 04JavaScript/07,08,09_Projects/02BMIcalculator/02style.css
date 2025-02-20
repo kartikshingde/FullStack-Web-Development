@@ -1,0 +1,17 @@
+.container{
+    
+    
+    margin-top: 155px;
+    width: 700px;
+    height: 900px;
+    padding-left: 42%;
+}
+button{
+    margin-left: 130px;
+}
+.result{
+    color: white;
+}
+#ans{
+    transition: all;
+}

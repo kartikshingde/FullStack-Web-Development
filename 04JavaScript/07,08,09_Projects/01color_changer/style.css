@@ -1,0 +1,45 @@
+.struct{
+    display: block;
+    margin: 100px;
+    text-align: center;
+}
+.buttons {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+    color: white;
+} 
+.buttons:hover{
+    transform: scale(1.1);
+}
+    
+span{
+    display: block;
+}
+#purple{
+    background-color: purple;
+    cursor: pointer;
+}
+#yellow{
+    background-color: yellow;
+    color: rgb(15, 15, 15);
+    cursor: pointer;
+}
+#orange{
+    background-color: orange;
+    cursor: pointer;
+}
+#green{
+    background-color: green;
+    cursor: pointer;
+}
+#blue{
+    background-color: blue;
+    cursor: pointer;
+}
+#indigo{
+    background-color: indigo;
+    cursor: pointer;
+
+}
