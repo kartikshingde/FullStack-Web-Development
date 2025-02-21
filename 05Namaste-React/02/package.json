@@ -1,0 +1,15 @@
+{
+  "name": "02",
+  "version": "1.0.0",
+  "description": "this is namaste react by akshay saini",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Kartik Shingde",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
