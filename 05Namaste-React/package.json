@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "this is namaste react by akshay saini",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "npx parcel index.html",
+    "build":"npx parcel build index.html"
   },
   "keywords": [],
   "author": "Kartik Shingde",
