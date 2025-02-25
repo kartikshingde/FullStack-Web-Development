@@ -1,68 +1,32 @@
 import RestarauntCard from "../components/RestaurantCard";
 import resList from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
   //Local State Variable
-  const [listOfRestaurants, setlistOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setlistOfRestaurants] = useState([]);
 
-  //   Normal JS Variable
-  let listOfRestaurantsJS = [
-    {
-      card: {
-        card: {
-          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-          info: {
-            id: "934678",
-            name: "Charcoal Eats - Biryani & Beyond",
-            cloudinaryImageId:
-              "FOOD_CATALOG/IMAGES/CMS/2024/9/29/50292730-b59a-4519-8a48-057dc89f93e4_c6b0cf1b-ee74-4376-855b-76531d564602.jpg",
-            locality: "Kothrud",
-            areaName: "Kothrud",
-            costForTwo: "₹500 for two",
-            cuisines: ["Biryani", "Kebabs", "North Indian", "Desserts"],
-            avgRating: 3.8,
-          },
-        },
-      },
-    },
-    {
-      card: {
-        card: {
-          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-          info: {
-            id: "934678",
-            name: "Dominos",
-            cloudinaryImageId:
-              "FOOD_CATALOG/IMAGES/CMS/2024/9/29/50292730-b59a-4519-8a48-057dc89f93e4_c6b0cf1b-ee74-4376-855b-76531d564602.jpg",
-            locality: "Kothrud",
-            areaName: "Kothrud",
-            costForTwo: "₹500 for two",
-            cuisines: ["Pizza", "Burger", "North Indian", "Desserts"],
-            avgRating: 4.5,
-          },
-        },
-      },
-    },
-    {
-      card: {
-        card: {
-          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-          info: {
-            id: "934678",
-            name: "Mac D",
-            cloudinaryImageId:
-              "FOOD_CATALOG/IMAGES/CMS/2024/9/29/50292730-b59a-4519-8a48-057dc89f93e4_c6b0cf1b-ee74-4376-855b-76531d564602.jpg",
-            locality: "Kothrud",
-            areaName: "Kothrud",
-            costForTwo: "₹500 for two",
-            cuisines: ["Pizza", "Burger", "North Indian", "Desserts"],
-            avgRating: 4.1,
-          },
-        },
-      },
-    },
-  ];
+
+  //useEffect()
+  useEffect(()=>{
+
+    fetchData();
+
+  },[]);
+  
+  const fetchData=async()=>{
+    const data =await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING" );
+    
+      const json=await data.json();
+
+      console.log("Fetched")
+      // console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+
+      setlistOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  
+  }
+
 
   return (
     <div className="body">
@@ -71,7 +35,7 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
-              (res) => res.card.card.info.avgRating > 4.3
+              (res) => res.info.avgRating > 4.4
             );
             setlistOfRestaurants(filteredList);
           }}
@@ -80,11 +44,11 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
+        
         {listOfRestaurants.map((restaurant) => (
-          <RestarauntCard resData={restaurant} />
+          <RestarauntCard key={restaurant.info.id} resData={restaurant} />
         ))}
 
-        {/* <RestarauntCard resName="KFC" cuisine="Burger,Fastfood" /> */}
       </div>
     </div>
   );
