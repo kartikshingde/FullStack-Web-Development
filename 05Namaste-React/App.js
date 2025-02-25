@@ -50,12 +50,8 @@ const Header = () => {
 const RestarauntCard = (props) => {
 
   const {resData}=props;
-
   // const {cloudinaryImageId,name,cuisines,avgRating,costForTwo}=resData?.data;
   // Optional Chaining here not used because cloudinary link is different for restaurantes
-  
-  
-
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
       
