@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Header } from "./components/Header";
-//{Header} beacause it is named import
+//{Header} beacause it is named import 
 import Body from "./components/Body";
 
 import { BrowserRouter, Routes, Route } from "react-router";
@@ -20,9 +20,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<AppLayout />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<AppLayout/>}/>
+        <Route path="/about" element={<About/>}/>
+      </Routes>
   </BrowserRouter>
+
 );
