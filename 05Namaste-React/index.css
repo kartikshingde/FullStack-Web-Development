@@ -62,3 +62,38 @@
     margin: 10px;
     cursor: pointer;
 }
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.shimmer-card{
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0f0;
+    margin: 20px;
+    border: 1px rgb(101, 100, 100);
+    transition-property: all;
+    transition-duration: 1s;
+    border-radius: 10px;
+}
+.login{
+    padding: 0px 20px;
+
+    cursor: pointer;
+}
+.filter{
+    display: flex;
+}
+.filter > .search{
+    margin: 5px 0px;
+}
+.search input{
+    padding: 2px;
+    margin-right: 3px;
+}
+.search button{
+    padding: 2px;
+    cursor: pointer;
+
+}
