@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "start": "npx parcel index.html",
-    "build":"npx parcel build index.html"
+    "build": "npx parcel build index.html"
   },
   "keywords": [],
   "author": "Kartik Shingde",
@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.2.0"
   },
-  "browserslist":[
+  "browserslist": [
     "last 2 version"
-    
   ]
 }
