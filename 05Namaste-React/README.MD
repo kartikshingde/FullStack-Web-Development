@@ -39,3 +39,8 @@ Two types of Export/Import
 -useState() -> SuperPowerful State variables in react
 -useEffect()
 *Import as like names imports => (import {useState} from "react")
+
+
+#Routing in Web Apps
+1.Client Side Routing
+2.Server Side Routing
