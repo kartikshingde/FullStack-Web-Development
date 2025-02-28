@@ -11,7 +11,7 @@ const RestarauntCard = (props) => {
         className="res-logo"
         src={CDN_URL + cloudinaryImageId}
         alt="res-logo"
-      />
+      />  
       <h3>{name}</h3>
       <h4>{cuisines.join(" ,")}</h4>
       <h4>{avgRating}</h4>

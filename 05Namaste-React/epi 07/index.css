@@ -1,99 +1,173 @@
-.header{
+/* Header Styles */
+.header {
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
+    flex-wrap: wrap;
 }
 
-.logo{
+.logo {
     width: 170px;
 }
 
-.nav-items > ul{
+.nav-items > ul {
     display: flex;
     padding: 0px 50px;
     list-style-type: none;
     font-size: 24px;
-
-
+    flex-wrap: wrap;
 }
 
-.nav-items >ul>li{
+.nav-items > ul > li {
     padding: 10px;
     margin: 10px;
 }
 
-.res-container{
+.res-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    gap: 15px; 
 }
 
-.res-card{
-    margin: 5px;
-    width: 200px;
-    height: auto;
-    padding: 5px;
+.res-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure equal distribution of space inside */
+    align-items: stretch; /* Stretch to the same height */
+    width: 200px; /* Fixed width */
+    height: 350px; /* Fixed height for uniformity */
+    padding: 10px;
+    background-color: #fff;
     border-radius: 5px;
-    
-
-    
+    border: 1px solid #ddd; /* Border color for card */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent content overflow */
+    transition: all 0.3s ease-in-out; /* Smooth transition on hover */
 }
-.res-card:hover{
-    border: 1px rgb(101, 100, 100);
-    transition-property: all;
-    transition-duration: 1s;
+
+.res-card:hover {
+    border: 1px solid rgb(101, 100, 100);
     cursor: pointer;
-    box-shadow: 0px 0px 2px 2px rgb(149, 149, 149);
-
-}
-.search{
-    padding: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(149, 149, 149, 0.5);
+    transform: scale(1.05); 
 }
 
-.res-logo{
+/* Logo inside the restaurant card */
+.res-logo {
     width: 100%;
-    height: 150px;
+    height: 150px; 
+    object-fit: cover; 
 }
-.filter-btn{
-    margin: 10px;
-    cursor: pointer;
+
+
+h3, h4 {
+    margin: 5px 0;
+    text-align: center;
+    font-size: 1rem;
 }
-.viewall-btn{
-    margin: 10px;
-    cursor: pointer;
-}
-.shimmer-container{
+
+
+.shimmer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.shimmer-card{
+
+.shimmer-card {
     width: 200px;
-    height: 400px;
+    height: 350px;
     background-color: #f0f0f0;
     margin: 20px;
-    border: 1px rgb(101, 100, 100);
-    transition-property: all;
-    transition-duration: 1s;
+    border: 1px solid #ddd;
     border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
-.login{
-    padding: 0px 20px;
 
+
+.search {
+    padding: 10px;
+}
+
+.filter-btn {
+    margin: 10px;
     cursor: pointer;
 }
-.filter{
+
+.viewall-btn {
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Filter Section */
+.filter {
     display: flex;
 }
-.filter > .search{
+
+.filter > .search {
     margin: 5px 0px;
 }
-.search input{
+
+.search input {
     padding: 2px;
     margin-right: 3px;
 }
-.search button{
+
+.search button {
     padding: 2px;
     cursor: pointer;
+}
 
+/* Info Section */
+.info {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.info button {
+    width: 150px;
+    margin-top: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.info span {
+    color: rgb(255, 106, 0);
+}
+
+/* Menu Section */
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Info Menu Hover */
+.infoMenu:hover {
+    box-shadow: 0px 0px 5px 5px rgb(162, 161, 161);
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 1s;
+    background-color: rgb(255, 255, 255);
+}
+
+.infoMenu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.infoMenu > .resName {
+    color: rgb(238, 63, 0);
+}
+
+.infoMenu span {
+    text-decoration: underline;
 }
