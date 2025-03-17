@@ -26,7 +26,7 @@ const Body = () => {
 
     const json = await data.json();
 
-    console.log("Fetched");
+    // console.log("Fetched");
     // console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
 
     //optional Chaining

@@ -14,7 +14,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Outlet/>
+      <Outlet />
     </div>
   );
 };
@@ -23,12 +23,12 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    
-    children:[
-      {
-        path:"/",
-        element:<Body/>
-      },
+
+    children: [
+      // {
+      //   path:"/",
+      //   element:<Body/>
+      // },
       {
         path: "/about",
         element: <About />,
@@ -38,14 +38,13 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path:"/restaurants/:resId",
-        element:<RestaurantMenu/>
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
         //resId will be extracted by useParams() Hook
-      }
+      },
     ],
-    errorElement:<Error/>
+    errorElement: <Error />,
   },
-  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
