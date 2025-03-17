@@ -4,7 +4,13 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      userInfo: {
+        name: "Dummy",
+        location: "Default",
+      },
+    };
+
     // console.log(this.props.name + " Child Constructor");
   }
 
@@ -13,9 +19,7 @@ class UserClass extends React.Component {
     //API Calls
 
     const data = await fetch("https://api.github.com/users/kartikshingde");
-
     const json = await data.json();
-
     console.log(json);
   }
 
