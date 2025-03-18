@@ -19,13 +19,22 @@ class UserClass extends React.Component {
     // console.log(this.props.name + " Child Component did Mount");
     //API Calls
 
-    const data = await fetch("https://api.github.com/users/akshaymarch7");
+    const data = await fetch("https://api.github.com/users/codercastor");
     const json = await data.json();
     console.log(json);
 
     this.setState({
       userInfo: json,
     });
+  }
+
+  componentDidUpdate() {
+    console.log("ComponentDidUpdate");
+  }
+  componentWillUnmount() {
+    console.log("Component will Unmount");
+    //Used to clear things on component change
+    // In Function Based -> use return() in useEffect to clean things
   }
 
   render() {
@@ -49,3 +58,23 @@ class UserClass extends React.Component {
 }
 
 export default UserClass;
+
+/**
+ *
+ * ------Mounting Lifecycle
+ *
+ * Constructor(dummy)
+ * Render(dummy)
+ *    <HTML Dummy>
+ * ComponentDidMount
+ *    <API Call>
+ *    <this.setState>
+ *
+ * -----Update Cycle
+ *
+ *    render(API Data)
+ *    <HTML(new Api Data)>
+ *ComponetDidMount
+ *
+ *
+ */
