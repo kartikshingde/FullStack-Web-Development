@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
 }
 
@@ -12,7 +12,6 @@ body{
 .card{
     height: 350px;
     width: 350px;
-    /* background-color: red; */
     padding: 10px;
     
     
@@ -33,7 +32,6 @@ body{
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
-    /* padding: 5px; */
 }
 .rname p{
     font-size: 20px;
@@ -50,15 +48,13 @@ body{
     width: 350px;
     display: flex;
     justify-content: space-between;
-    /* padding: 5px; */
     margin-top: 13px;
 }
 .location{
     width: 350px;
     display: flex;
     justify-content: space-between;
-    /* padding: 5px; */
-    /* margin-top: 5px; */
+   
 }
 .visit{
     display: flex;
@@ -82,4 +78,4 @@ button:hover{
     border-radius: 5px;
     background-color: white;
     cursor: pointer;
-}
+} */

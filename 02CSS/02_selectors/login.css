@@ -1,4 +1,4 @@
-body{
+/* body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: orange; */
     border: 5px; 
     gap: 10px;
     cursor: pointer;
@@ -47,4 +46,4 @@ button:hover{
     transform: scale(1.1);
     transform-style: unset;
 }
-
+ */
