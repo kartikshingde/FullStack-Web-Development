@@ -3,12 +3,13 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router";
 import { MENU_API } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const resInfo = useRestaurantMenu(resId);
-
+  // console.log(resInfo);
   if (resInfo === null) return <h1>Loading...</h1>;
 
   if (resInfo === null) return <Shimmer />;
@@ -24,31 +25,30 @@ const RestaurantMenu = () => {
       ?.card ||
     resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-  //No need to add OR condition above ...
+  // console.log(resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+
+  const categories =
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+
+  // console.log(categories);
 
   return (
-    <div className="menu flex flex-col items-center">
-      <div className="infoMenu p-4 m-2 border-2 rounded-xl hover:cursor-pointer flex-col flex items-center hover:shadow-2xl shadow-orange-400 transition-all duration-700 ">
-        <h1 className="resName text-6xl text-orange-400 font-medium">{name}</h1>
-        <h4 className="text-2xl">{cuisines.join(" ,")}</h4>
-        <h4 className="text-xl">{costForTwoMessage}</h4>
-        <h2 className="text-3xl font-medium text-pink-500 border border-green-300 mt-2 mb-2 px-4">
-          Menu
-        </h2>
-        <ul>
-          {itemCards.map((item) => (
-            <li className="text-lg " key={item.card.info.id}>
-              {<span className="text-purple-300">{"-> "}</span>}
-              {item.card.info.name}{" "}
-              {(
-                <span className="underline">
-                  {`- Rs.  ` + item.card.info.price / 100}
-                </span>
-              ) || `- Rs.  ` + item.card.info.defaultPrice / 100}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="text-center">
+      <h1 className="font-bold my-6 text-2xl">{name}</h1>
+      <p className="font-medium text-lg">
+        {cuisines.join(" ,")}-{costForTwoMessage}
+      </p>
+      {/* categories accourdians */}
+      {categories.map((category) => (
+        <RestaurantCategory
+          key={category.card.card.categoryId}
+          data={category?.card?.card}
+        />
+      ))}
     </div>
   );
 };
