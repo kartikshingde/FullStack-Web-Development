@@ -17,7 +17,7 @@ const Body = () => {
   //WhenEver state variable update, react trigger Reconcilation cycle(i.e. re-renders component)***
   // console.log("Body Rendered");
 
-  console.log(listOfRestaurants);
+  // console.log(listOfRestaurants);
 
   //useEffect()
   useEffect(() => {
@@ -79,7 +79,7 @@ const Body = () => {
             onClick={() => {
               //filter the res Cards and update the UI
               //need searchText
-              console.log(searchText);
+              // console.log(searchText);
 
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -100,7 +100,7 @@ const Body = () => {
                 (res) => res.info.avgRating >= 4.5
               );
               setfilteredRestaurant(filteredList);
-              console.log(filteredList);
+              // console.log(filteredList);
             }}
           >
             Top Rated Restaurants
@@ -126,7 +126,7 @@ const Body = () => {
           >
             {/* * If the restaurant have discount , add it to card... */}
 
-            {restaurant.info.sla.deliveryTime ? (
+            {restaurant.info.isOpen ? (
               <RestaurantDelivery resData={restaurant} />
             ) : (
               <RestarauntCard resData={restaurant} />

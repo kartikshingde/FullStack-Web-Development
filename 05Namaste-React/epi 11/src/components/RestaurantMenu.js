@@ -15,7 +15,7 @@ const RestaurantMenu = () => {
   // not used in ternary operator because, we have use here before destructuring as we set resInfo = null Initially
   // so it cannot destructure name,... of null
 
-  console.log(resInfo);
+  // console.log(resInfo);
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info;
 

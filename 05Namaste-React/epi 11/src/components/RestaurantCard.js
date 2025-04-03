@@ -34,7 +34,9 @@ export const withDeliverytimeLabel = (RestarauntCard) => {
   return (props) => {
     return (
       <div>
-        <label>Discounted</label>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">
+          Open
+        </label>
         <RestarauntCard {...props} />
       </div>
     );
