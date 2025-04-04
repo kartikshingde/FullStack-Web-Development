@@ -29,10 +29,10 @@ class UserClass extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("ComponentDidUpdate");
+    // console.log("ComponentDidUpdate");
   }
   componentWillUnmount() {
-    console.log("Component will Unmount");
+    // console.log("Component will Unmount");
     //Used to clear things on component change
     // In Function Based -> use return() in useEffect to clean things
   }

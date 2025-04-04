@@ -1,9 +1,9 @@
 import RestarauntCard, { withDeliverytimeLabel } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
+import UserContext from "../utils/UserContext";
 const Body = () => {
   //Local State Variable ->Super powerful variable
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
@@ -57,6 +57,8 @@ const Body = () => {
         Looks like you're offline! Please check your internet connection
       </h1>
     );
+
+  const { loggedUser, setUserName } = useContext(UserContext);
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
@@ -113,6 +115,15 @@ const Body = () => {
           >
             View All Restaurants
           </button>
+          <div>
+            <label className="ml-2 text-xl">UserName:</label>
+            <input
+              className="border border-black rounded-sm p-1"
+              maxLength={20}
+              value={loggedUser}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>
         </div>
       </div>
 

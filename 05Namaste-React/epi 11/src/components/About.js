@@ -2,6 +2,10 @@ import User from "./User";
 import UserClass from "./UserClass";
 import React from "react";
 
+import C from "../utils/UserContext";
+import { data } from "react-router";
+import UserContext from "../utils/UserContext";
+
 class About extends React.Component {
   constructor(props) {
     super(props);
@@ -17,6 +21,13 @@ class About extends React.Component {
     // console.log("Parent Render()");
     return (
       <div>
+        <div>
+          <UserContext.Consumer>
+            {({ loggedUser }) => (
+              <h2 className="text-lg font-bold">{loggedUser}</h2>
+            )}
+          </UserContext.Consumer>
+        </div>
         <h1>About</h1>
         <UserClass name={"Kartik Shingde"} location={"Pune MH12"} />
       </div>

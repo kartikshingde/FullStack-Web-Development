@@ -1,7 +1,8 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 export const Header = () => {
   const [btnNameReact, setbtnNameReact] = useState("Login");
@@ -13,6 +14,8 @@ export const Header = () => {
   // 3 .if dependency array has btnNameReact then it is called whenever btnNameReact changes...
 
   const onlineStatus = useOnlineStatus();
+
+  const { loggedUser } = useContext(UserContext);
 
   return (
     <div className="flex justify-between bg-pink-50 shadow-lg sticky top-0 flex-wrap z-100">
@@ -47,6 +50,7 @@ export const Header = () => {
           >
             {btnNameReact}
           </button>
+          <li className="px-4 font-bold">{loggedUser}</li>
         </ul>
       </div>
     </div>
