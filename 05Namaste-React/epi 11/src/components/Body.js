@@ -28,22 +28,22 @@ const Body = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-
     const json = await data.json();
-
-    // console.log("Fetched");
-    // console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-
-    //optional Chaining
-    setlistOfRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-
-    setfilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+  
+    const restaurants =
+      json?.data?.cards?.find(
+        (card) =>
+          card?.card?.card?.gridElements?.infoWithStyle?.restaurants !== undefined
+      )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+  
+    if (restaurants && Array.isArray(restaurants)) {
+      setlistOfRestaurants(restaurants);
+      setfilteredRestaurant(restaurants);
+    } else {
+      console.error("Restaurants not found in API response");
+    }
   };
-
+  
   //Conditional Rendering -> rendering on the basis of condition
   // if(listOfRestaurants.length===0){
   //   return <Shimmer/>
