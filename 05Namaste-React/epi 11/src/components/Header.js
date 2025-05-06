@@ -19,8 +19,8 @@ export const Header = () => {
 
   return (
     <div className="flex justify-between bg-pink-50 shadow-lg sticky top-0 flex-wrap z-100">
-      <div className="logo-container">
-        <img className="logo w-40" src={LOGO_URL} />
+      <div className="logo-container rounded-xl px-6 py-2 border border-yellow-500 bg-pink-50 ">
+        <img className="logo w-40 h-30 px-2" src={LOGO_URL} />
       </div>
       <div className="nav-items flex items-center flex-wrap">
         <ul className="flex p-4 m-4 gap-4 flex-wrap ">
